@@ -13,7 +13,7 @@ var width = svgWidth - margin.left - margin.right;
 var height = svgHeight - margin.top - margin.bottom;
 
 // Create an SVG wrapper, append an SVG group that will hold our chart, and shift the latter by left and top margins.
-var svg = d3.select(".scatter")
+var svg = d3.select("#scatter")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
@@ -24,7 +24,7 @@ var chartGroup = svg.append("g")
 // Import Data
 d3.csv("./assets/data/data.csv")
   .then(function(Data) {
-
+    console.log(Data);
     // Step 1: Parse Data/Cast as numbers
     // ==============================
     Data.forEach(function(data) {
@@ -35,11 +35,11 @@ d3.csv("./assets/data/data.csv")
     // Step 2: Create scale functions
     // ==============================
     var xLinearScale = d3.scaleLinear()
-      .domain([0, d3.max(Data, d => d.poverty)])
+      .domain([0, 35])
       .range([0, width]);
 
     var yLinearScale = d3.scaleLinear()
-      .domain([0, d3.max(Data, d => d.obesity)])
+      .domain([10, 45])
       .range([height, 0]);
 
     // Step 3: Create axis functions
@@ -66,7 +66,7 @@ d3.csv("./assets/data/data.csv")
     .attr("cy", d => yLinearScale(d.obesity))
     .attr("r", "15")
     .attr("fill", "pink")
-    .attr("opacity", ".5");
+    .attr("opacity", ".3");
 
     // Step 6: Initialize tool tip
     // ==============================
