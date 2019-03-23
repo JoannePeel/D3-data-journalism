@@ -1,10 +1,11 @@
 # D3-data-journalism
 
-The current data set incldes data on rates of income, obesity, poverty, etc. by state. MOE stands for "margin of error."
+The current data set inculdes data on rates of income, obesity, poverty, etc. by state. MOE stands for "margin of error."
 
-Create a scatter plot between two of the data variables, for example Healthcare vs. Poverty or Smokers vs. Age.
+I have created a scatter plot between poverty and obesity.
 
-Using the D3 techniques, create a scatter plot that represents each state with circle elements. 
+Using the D3 techniques, I have created a scatter plot that represents each state with a circle element. 
 
 *Note: You'll need to use python -m http.server to run the visualization. This will host the page at localhost:8000 in your web browser.
 
+# Results
